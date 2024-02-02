@@ -279,9 +279,9 @@ if __name__ == '__main__':
         main(urls, file_name)
         if which("ffmpeg"):
             if not check_vid(pathlib.Path(file_name)):
-                if not redownloaded:
+                if redownloaded:
                     print("Video is corrupted. Redownloading with a larger chunk size.")
-                    redownloaded = True
+                    redownloaded = False
                     BYTES_PER_SPLIT *= 2
                     continue
                 else:
