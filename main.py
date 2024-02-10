@@ -287,7 +287,7 @@ if __name__ == '__main__':
                 else:
                     print("Video is still corrupted. Skipping.")
         break
-   if os.path.isfile(f"{file_name}.mp4"):
+    if os.path.isfile(f"{file_name}.mp4"):
       import subprocess
       # Run the video_converter.py script from within the main script
       subprocess.run(['python', 'video_converter.py', file_name])
